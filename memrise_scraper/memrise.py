@@ -32,7 +32,7 @@ def get_soup(url):
 class Course(object):
 
     def __init__(self, course_url):
-        match = re.match(r'^(.*)/(\d+)/?$', course_url)
+        match = re.match(r'^(\w+/\w+)/(\d+)/?$', course_url)
         if match:
             course_url, level = match.groups()
         else:
